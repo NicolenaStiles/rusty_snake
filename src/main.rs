@@ -20,7 +20,7 @@ fn main() {
 
     // writing the menu
     write!(stdout,
-           "{}{}{}O",
+           "{}{}{}\u{2588}",
            termion::cursor::Goto(current_position.0, current_position.1),
            termion::clear::All,
            termion::cursor::Hide)
@@ -32,7 +32,7 @@ fn main() {
     // thread::sleep(one_second);
 
     write!(stdout,
-           "{}{}{}O",
+           "{}{}{}\u{2588}",
            termion::cursor::Goto(current_position.0,current_position.1),
            termion::clear::All,
            termion::cursor::Hide)
@@ -49,7 +49,7 @@ fn main() {
             Key::Up => {
                 current_position.1 -= 1;
                 write!(stdout,
-                        "{}{}{}O",
+                        "{}{}{}\u{2588}",
                         termion::clear::All,
                         termion::cursor::Goto(current_position.0,current_position.1),
                         termion::cursor::Hide)
@@ -58,25 +58,25 @@ fn main() {
             Key::Down => {
                 current_position.1 += 1;
                 write!(stdout,
-                        "{}{}{}O",
+                        "{}{}{}\u{2588}",
                         termion::clear::All,
                         termion::cursor::Goto(current_position.0,current_position.1),
                         termion::cursor::Hide)
                         .unwrap();
             }
             Key::Left => {
-                current_position.0 -= 1;
+                current_position.0 -= 2;
                 write!(stdout,
-                        "{}{}{}O",
+                        "{}{}{}\u{2588}",
                         termion::clear::All,
                         termion::cursor::Goto(current_position.0,current_position.1),
                         termion::cursor::Hide)
                         .unwrap();
             }
             Key::Right => {
-                current_position.0 += 1;
+                current_position.0 += 2;
                 write!(stdout,
-                        "{}{}{}O",
+                        "{}{}{}\u{2588}",
                         termion::clear::All,
                         termion::cursor::Goto(current_position.0,current_position.1),
                         termion::cursor::Hide)
